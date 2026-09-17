@@ -111,7 +111,11 @@ public class MathTest{
             "-7.4, -8.3, -9.2"
     })
     public void testNestedPowers(double base, double a, double b) {
-        (xa)b = xa*b;
+        assertEquals(
+                Math.pow(Math.pow(base, a), b),
+                Math.pow(base, a*b),
+                "The base to the power of a to the power of b should equal the base multiplied by the power of a*b"
+        );
     }
 
 
