@@ -62,7 +62,11 @@ public class MathTest{
             "-7.4, -8.3, -9.2"
     })
     public void testMultiplying(double base, double a, double b) {
-        xa * xb = xa+b
+        assertEquals(
+                Math.pow(base, a) * Math.pow(base, b),
+                Math.pow(base, a+b),
+                "Should equal base to the power of a times base to the power of b as x to the power of a+b"
+        );
     }
 
 
