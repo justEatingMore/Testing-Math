@@ -87,6 +87,11 @@ public class MathTest{
     })
     public void testDividing(double base, double a, double b) {
         xa / xb = xa-b
+        assertEquals(
+                Math.pow(base, a) / Math.pow(base, b),
+                Math.pow(base, (a-b)),
+                "Should equal base to the power of a / base to the power of b to base to the power of a-b"
+        );
     }
 
 
