@@ -86,7 +86,6 @@ public class MathTest{
             "-7.4, -8.3, -9.2"
     })
     public void testDividing(double base, double a, double b) {
-        xa / xb = xa-b
         assertEquals(
                 Math.pow(base, a) / Math.pow(base, b),
                 Math.pow(base, (a-b)),
@@ -145,7 +144,11 @@ public class MathTest{
     @ParameterizedTest
     @ValueSource(doubles = {1, 5.0, 3.7, -1, -4.0, -4.9})
     public void testZeroBase(double exponent) {
-        0x = 0
+        assertEquals(
+                Math.pow(0, exponent),
+                0,
+                "0 to the power of anything should always be 0"
+        );
     }
 }
 
