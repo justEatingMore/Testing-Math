@@ -37,8 +37,11 @@ public class MathTest{
             "4, 1"
     })
     public void testReciprocal(double base, double exponent) {
-
-        x-a = 1/xa
+        assertEquals(
+                Math.pow(base, exponent * -1),
+                1 / Math.pow(base, exponent),
+                "Base to the power of the next exponent should equal to 1 over the base to the power of the exponent"
+        );
 
     }
 
